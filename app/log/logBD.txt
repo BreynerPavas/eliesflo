@@ -1,1 +1,0 @@
-SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 2###Codigo: 42000 0.67292500 1713869089

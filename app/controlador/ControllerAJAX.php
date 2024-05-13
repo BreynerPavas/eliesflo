@@ -26,6 +26,13 @@ class ControllerAJAX
         echo $consulta;
         
     }
+    function procedimientoReservas(){
+        $m = new Memeteca();
+        $consulta = $m -> obtenerProcediemientos();
+        $consulta = json_encode($consulta);
+        header("Content-type: application/json");
+        echo $consulta;
+    }
     function obtenerCommentsPost(){
         $id = $_REQUEST["idPost"];
         $m = new Memeteca();

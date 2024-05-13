@@ -23,8 +23,8 @@ if(isset($_SESSION["nivel_usuario"])){
 	require __DIR__."/../../web/templates/EliHeaderNotLogged.php";
 }
 
-if(isset($params["mensaje"])){
-	echo $params["mensaje"];
+if(isset($errores)){
+	print_r($errores);
 }
 
 
@@ -212,44 +212,11 @@ if(isset($params["mensaje"])){
 </section>
 <section class="bg-light">
 	<div class="container py-5 d-flex flex-wrap justify-content-center">
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1548504773-429e84f586d2?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1548504773-429e84f586d2?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1548504773-429e84f586d2??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1548504773-429e84f586d2??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1548504773-429e84f586d2??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1548504773-429e84f586d2??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mnx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Nio Milano" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1548504769-900b70ed122e?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1548504769-900b70ed122e?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1548504769-900b70ed122e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1548504769-900b70ed122e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1548504769-900b70ed122e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1548504769-900b70ed122e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8b3JhbmdlfGVufDB8Mnx8fDE2MzUwMDcyMDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Nio Milano" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1590284635836-dc0f237b74d9?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjZ8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDUz&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1590284635836-dc0f237b74d9?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjZ8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDUz&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1590284635836-dc0f237b74d9??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjZ8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDUz&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1590284635836-dc0f237b74d9??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjZ8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDUz&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1590284635836-dc0f237b74d9??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjZ8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDUz&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1590284635836-dc0f237b74d9??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjZ8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDUz&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by angela liu" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1487490221576-1fcab90843eb?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MzN8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDU3&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1487490221576-1fcab90843eb?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MzN8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDU3&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1487490221576-1fcab90843eb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MzN8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDU3&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1487490221576-1fcab90843eb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MzN8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDU3&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1487490221576-1fcab90843eb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MzN8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDU3&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1487490221576-1fcab90843eb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MzN8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDU3&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Mohamed Nohassi" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1532264043222-be99c0b73c8e?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDh8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1532264043222-be99c0b73c8e?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDh8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1532264043222-be99c0b73c8e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDh8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1532264043222-be99c0b73c8e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDh8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1532264043222-be99c0b73c8e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDh8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1532264043222-be99c0b73c8e??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDh8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Photoholgic" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1591215553160-c100fda1f578?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDR8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1591215553160-c100fda1f578?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDR8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1591215553160-c100fda1f578??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDR8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1591215553160-c100fda1f578??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDR8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1591215553160-c100fda1f578??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDR8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1591215553160-c100fda1f578??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDR8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Tanjir Ahmed Chowdhury" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Vlad Smolyakov" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1517281749396-564b95a206c3?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDl8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1517281749396-564b95a206c3?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDl8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1517281749396-564b95a206c3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDl8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1517281749396-564b95a206c3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDl8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1517281749396-564b95a206c3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDl8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1517281749396-564b95a206c3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDl8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Charles Deluvio" loading="lazy" lc-helper="image">
-		</div>
-
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1509178630052-fb2fa8a64cde??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NDd8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA3NDkx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Vlad Smolyakov" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8OTB8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA4NjY0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8OTB8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA4NjY0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8OTB8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA4NjY0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8OTB8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA4NjY0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8OTB8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA4NjY0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8OTB8fG9yYW5nZXxlbnwwfDJ8fHwxNjM1MDA4NjY0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Karsten Winegeart" loading="lazy" lc-helper="image">
-		</div>
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1607007372717-d777f16ab987?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUxfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1607007372717-d777f16ab987?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUxfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1607007372717-d777f16ab987??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUxfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1607007372717-d777f16ab987??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUxfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1607007372717-d777f16ab987??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUxfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1607007372717-d777f16ab987??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUxfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Anas Alhajj" loading="lazy" lc-helper="image">
-		</div>
-
-		<div class="lc-block col-4 col-md-3 col-xxl-2">
-			<img class="img-fluid" src="https://images.unsplash.com/photo-1620107124519-286d7579415c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUyfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1620107124519-286d7579415c?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUyfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1620107124519-286d7579415c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUyfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1620107124519-286d7579415c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUyfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1620107124519-286d7579415c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUyfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1620107124519-286d7579415c??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTUyfHxvcmFuZ2V8ZW58MHwyfHx8MTYzNTAwODY3OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Dustin Humes" loading="lazy" lc-helper="image">
-		</div>
+		
+		<?php 
+		$m = new Memeteca;
+		$m->pintaimgProcedimientos();
+		?>
 	</div>
 </section>
 <section class="">
@@ -284,7 +251,7 @@ if(isset($params["mensaje"])){
 
 							<div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushMyFAQ2">
 								<div class="accordion-body" editable="rich">Experimenta una revitalización completa con nuestros procedimientos de limpieza facial en EliEsFlo. Nuestros expertos en belleza te brindarán una experiencia relajante y efectiva, eliminando impurezas, células muertas y dejando tu piel radiante y rejuvenecida. Descubre el poder de una piel limpia y saludable con nuestros tratamientos de limpieza facial, diseñados para resaltar tu belleza natural y dejar una impresión duradera
-									<p><a href="#" class="float-end">Echemos un vistazo</a><br></p>
+									<p><a href="index.php?ctl=mostrarTipos&id=2&name=Facial" class="float-end">Echemos un vistazo</a><br></p>
 								</div>
 							</div>
 						</div>
@@ -294,7 +261,7 @@ if(isset($params["mensaje"])){
 
 							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushMyFAQ2">
 								<div class="accordion-body" editable="rich">Sumérgete en un oasis de relajación y bienestar con nuestros masajes corporales en EliEsFlo. Te guiaremos en un viaje hacia la calma y el rejuvenecimiento, utilizando técnicas especializadas para aliviar la tensión muscular, mejorar la circulación y restaurar el equilibrio corporal. Experimenta la sensación de renovación mientras el estrés se disipa y la energía positiva fluye a través de tu ser.</div>
-								<p><a href="#" class="float-end">Echemos un vistazo</a><br></p>
+								<p><a href="index.php?ctl=mostrarTipos&id=1&name=corporal" class="float-end">Echemos un vistazo</a><br></p>
 							</div>
 						</div>
 						<div class="lc-block accordion-item mb-5 p-md-4 card card-body shadow"><a editable="inline" class="fw-bold text-decoration-none text-dark h4" href="#" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
@@ -303,7 +270,7 @@ if(isset($params["mensaje"])){
 
 							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushMyFAQ2">
 								<div class="accordion-body" editable="rich">Descubre la libertad de una piel suave y sin vello con nuestros tratamientos de depilación láser en EliEsFlo. Nuestra tecnología de vanguardia y nuestro equipo de profesionales certificados te ofrecen una solución segura, efectiva y de larga duración para eliminar el vello no deseado en cualquier parte del cuerpo. Olvídate de los métodos tradicionales de depilación y disfruta de una experiencia sin dolor y sin preocupaciones. Con nuestra depilación láser, podrás decir adiós al vello no deseado de forma permanente, revelando una piel suave y sedosa que te hará sentir segura y lista para cualquier ocasión.</div>
-								<p><a href="#" class="float-end">Echemos un vistazo</a><br></p>
+								<p><a href="index.php?ctl=mostrarTipos&id=3&name=capilar" class="float-end">Echemos un vistazo</a><br></p>
 							</div>
 						</div>
 						
@@ -315,65 +282,7 @@ if(isset($params["mensaje"])){
 		</div>
 	</div>
 </section>
-<section class="">
-	<div class="container py-6">
-		<div class="row justify-content-center mb-5">
-			<div class="col-xl-7 col-lg-10">
-				<div class="lc-block text-center">
-					<div editable="rich">
 
-						<h2 class="display-5 fw-bold">Our Lovely Clients</h2>
-
-						<p class="rfs-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a lacus est. Etiam diam metus, lobortis non augue at, placerat viverra risus. Cras ornare faucibus laoreet. Aenean vel nisi.</p>
-					</div>
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-		</div>
-		<div class="row mb-5">
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1572059002053-8cc5ad2f4a38?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8Z29vZ2xlfGVufDB8Mnx8fDE2NDU4MTYyNDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1572059002053-8cc5ad2f4a38?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8Z29vZ2xlfGVufDB8Mnx8fDE2NDU4MTYyNDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1572059002053-8cc5ad2f4a38??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8Z29vZ2xlfGVufDB8Mnx8fDE2NDU4MTYyNDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1572059002053-8cc5ad2f4a38??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8Z29vZ2xlfGVufDB8Mnx8fDE2NDU4MTYyNDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1572059002053-8cc5ad2f4a38??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8Z29vZ2xlfGVufDB8Mnx8fDE2NDU4MTYyNDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1572059002053-8cc5ad2f4a38??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MXx8Z29vZ2xlfGVufDB8Mnx8fDE2NDU4MTYyNDI&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Lauren Edvalson" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1604639168969-02843477dce3?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTB8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODAzOQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1604639168969-02843477dce3?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTB8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODAzOQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1604639168969-02843477dce3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTB8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODAzOQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1604639168969-02843477dce3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTB8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODAzOQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1604639168969-02843477dce3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTB8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODAzOQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1604639168969-02843477dce3??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTB8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODAzOQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by kang haneul" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1557551220-4e0e9f87ff36?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTF8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1557551220-4e0e9f87ff36?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTF8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1557551220-4e0e9f87ff36??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTF8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1557551220-4e0e9f87ff36??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTF8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1557551220-4e0e9f87ff36??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTF8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1557551220-4e0e9f87ff36??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTF8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Jackie Chin" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1621461133947-f63381c2f7f8?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1621461133947-f63381c2f7f8?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1621461133947-f63381c2f7f8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1621461133947-f63381c2f7f8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1621461133947-f63381c2f7f8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1621461133947-f63381c2f7f8??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA0Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Doug Watanabe" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1633886897663-44c707d71904?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjd8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1633886897663-44c707d71904?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjd8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1633886897663-44c707d71904??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjd8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1633886897663-44c707d71904??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjd8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1633886897663-44c707d71904??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjd8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1633886897663-44c707d71904??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjd8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by peter golob" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjV8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjV8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjV8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjV8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjV8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjV8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Javier Esteban" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjl8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjl8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1633419461186-7d40a38105ec??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjl8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1633419461186-7d40a38105ec??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjl8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1633419461186-7d40a38105ec??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjl8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1633419461186-7d40a38105ec??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Mjl8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Sunder Muthukumaran" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-			<div class="col-6 col-sm-3 mb-3 mb-lg-0 col-lg">
-				<div class="lc-block">
-					<img class="img-fluid" src="https://images.unsplash.com/photo-1518194951576-93eec1215e9a?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080" srcset="https://images.unsplash.com/photo-1518194951576-93eec1215e9a?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=1080 1080w, https://images.unsplash.com/photo-1518194951576-93eec1215e9a??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1518194951576-93eec1215e9a??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1518194951576-93eec1215e9a??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1518194951576-93eec1215e9a??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjN8fGxvZ298ZW58MHwyfHx8MTY0NTk3ODA1Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Photo by Chris Liverani" lc-helper="image">
-				</div><!-- /lc-block -->
-			</div><!-- /col -->
-		</div>
-
-	</div>
-</section>
 <section class="bg-light py-6" style="">
 	<div class="container py-4 mt-2">
 
@@ -392,13 +301,8 @@ if(isset($params["mensaje"])){
 						<div class="row">
 							<div class="lc-block mb-4 d-flex justify-content-center">
 								<div class="position-relative mt-5">
-									<img alt="" class="rounded-circle" src="https://images.unsplash.com/photo-1569779213435-ba3167dde7cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="" loading="lazy" width="128" height="128" lc-helper="image">
-				
-									<div class="lc-block position-absolute top-0 start-100 ms-5 translate-middle ">
-										<svg xmlns="http://www.w3.org/2000/svg" width="7em" height="7em" fill="currentColor" viewBox="0 0 16 16" style="" lc-helper="svg-icon" class="text-body">
-											<path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"></path>
-										</svg>
-									</div>
+									<img alt="" class="rounded-circle" src="./img/eliesfloLogo.png" style="" loading="lazy" width="300" lc-helper="image">
+			
 				
 				
 				
@@ -409,11 +313,11 @@ if(isset($params["mensaje"])){
 				
 								<div class="lc-block text-center">
 									<div editable="rich">
-										<p class="text-muted lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo nulla, suscipit non dapibus vitae, dignissim id quam. Donec eget nulla tellus. </p>
+										<p class="text-muted lead">Fue una experiencia increible, geniales profesionales y personas.</p>
 									</div>
 				
 									<div editable="rich">
-										<h5><strong> Eddie Valiant</strong></h5>
+										<h5><strong> Breyner Pavas</strong></h5>
 									</div>
 				
 									<small editable="inline" class="text-secondary" style="letter-spacing:1px">CEO of Acme Inc. </small>
@@ -421,72 +325,10 @@ if(isset($params["mensaje"])){
 							</div><!-- /col -->
 						</div>
 					</div>
-					<div class="carousel-item">
-						<div class="row">
-							<div class="lc-block mb-4 d-flex justify-content-center">
-								<div class="position-relative mt-5">
-									<img alt="" class="rounded-circle" src="https://images.unsplash.com/photo-1569779213435-ba3167dde7cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="" loading="lazy" width="128" height="128" lc-helper="image">
-				
-									<div class="lc-block position-absolute top-0 start-100 ms-5 translate-middle ">
-										<svg xmlns="http://www.w3.org/2000/svg" width="7em" height="7em" fill="currentColor" viewBox="0 0 16 16" style="" lc-helper="svg-icon" class="text-body">
-											<path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"></path>
-										</svg>
-									</div>
-				
-				
-				
-								</div>
-							</div>
-				
-							<div class="col-md-6 offset-md-3">
-				
-								<div class="lc-block text-center">
-									<div editable="rich">
-										<p class="text-muted lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo nulla, suscipit non dapibus vitae, dignissim id quam. Donec eget nulla tellus. </p>
-									</div>
-				
-									<div editable="rich">
-										<h5><strong> Eddie Valiant</strong></h5>
-									</div>
-				
-									<small editable="inline" class="text-secondary" style="letter-spacing:1px">CEO of Acme Inc. </small>
-								</div><!-- /lc-block -->
-							</div><!-- /col -->
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="row">
-							<div class="lc-block mb-4 d-flex justify-content-center">
-								<div class="position-relative mt-5">
-									<img alt="" class="rounded-circle" src="https://images.unsplash.com/photo-1569779213435-ba3167dde7cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="" loading="lazy" width="128" height="128" lc-helper="image">
-				
-									<div class="lc-block position-absolute top-0 start-100 ms-5 translate-middle ">
-										<svg xmlns="http://www.w3.org/2000/svg" width="7em" height="7em" fill="currentColor" viewBox="0 0 16 16" style="" lc-helper="svg-icon" class="text-body">
-											<path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"></path>
-										</svg>
-									</div>
-				
-				
-				
-								</div>
-							</div>
-				
-							<div class="col-md-6 offset-md-3">
-				
-								<div class="lc-block text-center">
-									<div editable="rich">
-										<p class="text-muted lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo nulla, suscipit non dapibus vitae, dignissim id quam. Donec eget nulla tellus. </p>
-									</div>
-				
-									<div editable="rich">
-										<h5><strong> Eddie Valiant</strong></h5>
-									</div>
-				
-									<small editable="inline" class="text-secondary" style="letter-spacing:1px">CEO of Acme Inc. </small>
-								</div><!-- /lc-block -->
-							</div><!-- /col -->
-						</div>
-					</div>
+					<?php
+					$m = new Memeteca;
+					$m->pintaCarrousel();
+					?>
 				</div>
 				<div class="w-100 text-center mt-4">
 					<a class="carousel-control-prev position-relative d-inline me-4" href="#carouselTestimonial" data-bs-slide="prev">
@@ -520,7 +362,7 @@ if(isset($params["mensaje"])){
 		</div>
 
 		<div class="row justify-content-center mb-5">
-			<div class="position-relative col"><img class="rounded shadow-lg wp-image-529 img-fluid" style="filter: brightness(0.8);aspect-ratio: 16 / 9; object-fit:cover" src="https://images.unsplash.com/photo-1572025442646-866d16c84a54?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjR8fG9mZmljZXxlbnwwfDB8fHwxNjQ2MDQ5OTk0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" loading="lazy" width="1080" height="768" srcset="https://images.unsplash.com/photo-1572025442646-866d16c84a54?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjR8fG9mZmljZXxlbnwwfDB8fHwxNjQ2MDQ5OTk0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1572025442646-866d16c84a54??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjR8fG9mZmljZXxlbnwwfDB8fHwxNjQ2MDQ5OTk0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1572025442646-866d16c84a54??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjR8fG9mZmljZXxlbnwwfDB8fHwxNjQ2MDQ5OTk0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1572025442646-866d16c84a54??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjR8fG9mZmljZXxlbnwwfDB8fHwxNjQ2MDQ5OTk0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1572025442646-866d16c84a54??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MjR8fG9mZmljZXxlbnwwfDB8fHwxNjQ2MDQ5OTk0&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" alt="Photo by Slidebean" lc-helper="image"> </div>
+			<div class="position-relative col"><img class="rounded shadow-lg wp-image-529 img-fluid" style="filter: brightness(0.8);aspect-ratio: 16 / 9; object-fit:cover" src="./img/oficina.jpg" loading="lazy" width="1080" height="768" srcset="" alt="Photo by Slidebean" lc-helper="image"> </div>
 		</div>
 	</div>
 </section>

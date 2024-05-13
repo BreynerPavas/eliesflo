@@ -14,7 +14,7 @@ class Memeteca extends Modelo
             $result->bindValue(':description', $descripcion);
             $result->bindValue(':goal', $goal);
             $result->bindValue(':picture1', $img1);
-            $result->bindValue(':picture2', $img1);
+            $result->bindValue(':picture2', $img2);
             $result->bindValue(':id_tipoProcedimiento', $tipo);
             return $result->execute();
 
@@ -378,6 +378,7 @@ class Memeteca extends Modelo
         P.picture1 AS imagen1,
         P.picture2 AS imagen2,
         TP.tipo AS tipo_procedimiento
+
     FROM 
         Procedimiento AS P
     INNER JOIN 
@@ -414,8 +415,141 @@ class Memeteca extends Modelo
             ');
         }
     }
+    public function pintaComentario($idProcess){
+        $consulta = "SELECT 
+        c.id AS comment_id,
+        c.text AS comment_text,
+        c.id_user AS user_id,
+        u.name AS user_name
+        FROM 
+            comments c
+        JOIN 
+            procedimientocomment pc ON c.id = pc.id_comment
+        JOIN 
+            users u ON c.id_user = u.id
+        WHERE 
+            pc.id_procedimiento = :idProcess
+        AND 
+            c.active = 1
+        ORDER BY c.ID DESC;
+        ";
+        $result = $this -> conexion -> prepare($consulta);
+        $result->bindValue(':idProcess', $idProcess);
+        $result->execute();
+        foreach ($result->fetchAll(PDO::FETCH_ASSOC) as $comentario) {
+            echo('
+            <div class="my-2 px-2" style="border:1px solid gray;border-radius:5px" id="'.$comentario["comment_id"].'">
+								<div class="d-flex flex-start align-items-center">
+									<div>
+										<h6 class="fw-bold text-primary mb-1" id="'.$comentario["user_id"].'">'.$comentario["user_name"].'</h6>
+									</div>
+								</div>
+								<p class="mt-3 mb-4 pb-2">
+									'.$comentario["comment_text"].'
+								</p>
+							</div>
+            ');
+        }
+        
+
+    }
+    public function pintaimgProcedimientos(){
+        $consulta = 'SELECT * FROM eliesflo.procedimiento ORDER BY id DESC LIMIT 12';
+        $result = $this -> conexion -> prepare($consulta);
+        $result->execute();
+        foreach ($result->fetchAll(PDO::FETCH_ASSOC) as $procedimiento) {
+            echo('
+            <div class="lc-block col-4 col-md-3 col-xxl-2">
+                <img class="img-fluid" src="'.$procedimiento["picture1"].'" width="300" height="300" alt="'.$procedimiento["name"].'" loading="lazy" lc-helper="image">
+            </div>
+            ');
+        }
+    }
+    
+    
+    public function anyadirComentario($comentari,$idUsuario,$idProcess){
+
+        $consulta = "INSERT INTO eliesflo.comments (`text`, `id_user`,`active`) VALUES (:text, :id_user, :active)";
+        $result = $this->conexion->prepare($consulta);
+        $result->bindValue(':text', $comentari);
+        $result->bindValue(':id_user', $idUsuario);
+        $result->bindValue(':active', 1);
+        $result->execute();
+
+        if ($result) {
+            $id_comentario = $this->conexion->lastInsertId();
+            $consulta2 = "INSERT INTO eliesflo.procedimientocomment (`id_comment`,`id_procedimiento`) VALUES (:id_comentario,:id_procedimiento)";
+            $result2 = $this->conexion->prepare($consulta2);
+            $result2->bindValue(':id_comentario', $id_comentario);
+            $result2->bindValue(':id_procedimiento', $idProcess);
+            $result2->execute();
+            return $result2;
+        }
+        return $result;
+
+    }
+    public function obtenerProcediemientos(){
+        $consulta = 'SELECT * FROM eliesflo.procedimiento ORDER BY id ASC';
+        $result = $this -> conexion -> prepare($consulta);
+        $result->execute();
+        return $procedimientos = ($result->fetchAll(PDO::FETCH_ASSOC));
+    }
+    public function pintaCarrousel(){
+        $consulta = "SELECT 
+        c.id AS comment_id,
+        c.text AS comment_text,
+        c.id_user AS user_id,
+        u.name AS user_name
+        FROM 
+            comments c
+        JOIN 
+            procedimientocomment pc ON c.id = pc.id_comment
+        JOIN 
+            users u ON c.id_user = u.id
+        WHERE 
+            c.active = 1
+        ORDER BY c.ID DESC
+        LIMIT 3;
+        ";
+        $result = $this -> conexion -> prepare($consulta);
+        $result->execute();
+        $comentarios = ($result->fetchAll(PDO::FETCH_ASSOC));
+        for($i = 0;$i< count($comentarios);$i++){
+            echo('
+            <div class="carousel-item">
+						<div class="row">
+							<div class="lc-block mb-4 d-flex justify-content-center">
+								<div class="position-relative mt-5">
+									<img alt="" class="rounded-circle" src="./img/eliesfloLogo.png" style="" loading="lazy" width="300" lc-helper="image">
+				
+									
+				
+				
+				
+								</div>
+							</div>
+				
+							<div class="col-md-6 offset-md-3">
+				
+								<div class="lc-block text-center">
+									<div editable="rich">
+										<p class="text-muted lead">'.$comentarios[$i]["comment_text"].'</p>
+									</div>
+				
+									<div editable="rich">
+										<h5><strong>'.$comentarios[$i]["user_name"].'</strong></h5>
+									</div>
+				
+								
+								</div><!-- /lc-block -->
+							</div><!-- /col -->
+						</div>
+					</div>
+            ');
+        }
+    }
     public function pintaProcedimientosEspecificos($id){
-        $consulta = 'SELECT * FROM eliesflo.procedimiento WHERE id_tipoProcedimiento = :id';
+        $consulta = 'SELECT * FROM eliesflo.procedimiento WHERE id_tipoProcedimiento = :id ORDER BY id DESC';
         $result = $this -> conexion -> prepare($consulta);
         $result->bindValue(':id', $id);
         $result->execute();

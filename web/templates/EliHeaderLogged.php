@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark sticky-top" style="">
         <div class="container">
             <a class="navbar-brand" href="index.php?ctl=EliInicio"> <img
-                    src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                    src="./img/eliesfloLogo.png" width="50"
                     class="d-inline-block align-top img-fluid" alt=""> <span editable="inline">EliEsFLo</span> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1"
                 aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation">

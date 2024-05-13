@@ -11,7 +11,7 @@ class Config {
 
     public static $extensionesValidas = ["jpg","jpeg","png","webp"];
     public static $rutaImagenes = "./img";
-    public static $maxFichero = 300000;
+    public static $maxFichero = 3000000;
     public static $tablasAdmin = ["users", "posts", "comments"];
     
 }

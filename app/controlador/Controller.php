@@ -198,6 +198,17 @@ class Controller
         }
         require __DIR__ . '/../../web/templates/wu_login.php';
     }
+    public function EliSubirComentario(){
+        print_r($_REQUEST);
+        $comentario = recoge("comment");
+        $idPrecedimiento = $_REQUEST["id"];
+        echo("<br>");
+        print_r($_SESSION);
+        $m = new Memeteca;
+        if($m->anyadirComentario($comentario,$_SESSION["idUsuario"],$idPrecedimiento)){
+            header('Location: index.php?ctl=EliProcedimientoEspecifico&id='.$idPrecedimiento);
+        }
+    }
     public function EliProcedimientoEspecifico(){
         
         
@@ -208,6 +219,16 @@ class Controller
 
 
         require __DIR__."/../../web/templates/EliprocedimientoEspecifico.php";
+    }
+    public function EliReservarCita(){
+        require __DIR__."/../../web/templates/EliReservarCita.php";
+    }
+    public function enviarReserva(){
+        print_r($_POST);
+        
+    }
+    public function subirReservacion(){
+        print_r($_POST);
     }
     public function EliCerrarSesion(){
         session_unset();
@@ -265,14 +286,7 @@ class Controller
 
 
     }
-    public function wuPrivada(){
-        //$id_user= recoge("ID"); 
-        require __DIR__."/../../web/templates/wu_privada.php";//aqui tenemos que validar los comentarios
-    }
-    public function wuTags(){
-        //$id_user= recoge("ID"); 
-        require __DIR__."/../../web/templates/wu_tags.php";//aqui tenemos que validar los comentarios
-    }
+    
 
     public function wuModificarUsuario(){
             if (isset($_POST['bModificar'])) {

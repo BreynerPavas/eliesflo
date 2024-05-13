@@ -12,7 +12,7 @@
     <!-- header No Logeado-->
 	<nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark sticky-top" style="">
         <div class="container">
-        <a class="navbar-brand" href="index.php?ctl=EliInicio"> <img src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top img-fluid" alt=""> <span editable="inline">EliEsFLo</span> </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1" aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <a class="navbar-brand" href="index.php?ctl=EliInicio"> <img src="./img/eliesfloLogo.png" width="50" class="d-inline-block align-top img-fluid" alt=""> <span editable="inline">EliEsFLo</span> </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1" aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="myNavbar1">
             <div lc-helper="shortcode" class="live-shortcode me-auto"> 
               <!--  lc_nav_menu -->
@@ -21,13 +21,12 @@
                 </ul> 
                 <!-- /lc_nav_menu -->
             </div>
-            <div class="lc-block me-1 ms-5">
-                    <div class="ms-lg-auto  ">
-                        <a class="btn btn-outline-primary me-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">Iniciar Sesion</a>
-                        <a class="btn btn-outline-success me-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrarse</a>
+            <div class="ms-lg-auto d-flex flex-column flex-sm-row align-items-start">
+    <a class="btn btn-outline-primary me-2 mb-2 mb-sm-0 w-auto" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">Iniciar Sesión</a>
+    <a class="btn btn-outline-success me-2 w-auto" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Registrarse</a>
+</div>
 
-                    </div>
-            </div>
+
         </div>
     </div>
   </nav><!-- Modal Inicio Session -->
@@ -50,6 +49,7 @@
                 <input type="password" class="form-control" id="usuarioContrasenya" name="loginContrasenya" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" required>
                 <div class="invalid-feedback">Contraseña no valida</div>
             </div>
+            <a href="">Has olvidado tu contraseña?</a>
             <?php 
             if(!empty($params["mensaje"])){
                 echo($params["mensaje"]);
