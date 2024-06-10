@@ -1,33 +1,59 @@
-# WuBa: Web de Humor Negro
-## ¡Bienvenido a nuestra web de humor negro!
+# README
 
-## Descripción del Proyecto
-Este proyecto es una plataforma en línea donde los usuarios pueden publicar contenido relacionado con el humor negro. Los usuarios pueden registrarse, iniciar sesión, publicar sus propias publicaciones, seguir a otros usuarios, y etiquetar sus publicaciones con temas relevantes y seguir etiquetas.
+## 1. Introducción
 
-## Funcionalidades Principales
-* **Registro de Usuarios:** Los usuarios pueden registrarse para obtener una cuenta en la plataforma.
-* **Inicio de Sesión:** Una vez registrados, los usuarios pueden iniciar sesión en sus cuentas.
-* **Publicaciones:** Los usuarios pueden crear y compartir publicaciones de humor negro.
-* **Seguir Usuarios:** Los usuarios pueden seguir a otros usuarios para mantenerse al día con sus publicaciones.
-* **Etiquetado de Publicaciones:** Las publicaciones pueden ser etiquetadas con temas relevantes para facilitar la búsqueda y la organización del contenido.
+En respuesta a la necesidad de simplificar la gestión y mejorar la experiencia del cliente en clínicas estéticas, se ha desarrollado una plataforma web específica para la gestión de citas y la interacción entre los usuarios y la clínica. Esta herramienta ofrece una solución integral y moderna para los desafíos comunes que enfrentan las clínicas estéticas, especialmente las pequeñas y medianas empresas.
 
-## Tecnologías Utilizadas
-* **Lenguajes de Programación:** PHP y JavaScript.
-* **Base de Datos:** MySQL
-* **Frontend:** Bootstrap
+### Objetivo Principal
+El objetivo principal de esta plataforma es proporcionar una forma más segura y eficiente para que las clínicas gestionen sus citas y comunicaciones. Destaca la capacidad de agendar citas en tiempo real mediante la integración con Google Calendar, lo que garantiza la seguridad y fiabilidad de las reservas y envía recordatorios automáticos para reducir el margen de error.
 
-## Instalación
-1. Para ejecutar este proyecto localmente, sigue estos pasos:
-2. Clona este repositorio en tu máquina local.
-3. Ejecuta el servidor local.
-4. Accede a la aplicación desde tu navegador web.
+### Interacción de Usuarios
+La plataforma mejora significativamente la interacción de los usuarios mediante la función de comentarios sobre los procedimientos estéticos. Los clientes pueden compartir sus experiencias y opiniones, enriqueciendo la información disponible para otros usuarios interesados.
 
-## Contribución
-¡Apreciamos las contribuciones! Si deseas contribuir a este proyecto, sigue estos pasos:
-1. Haz un fork del repositorio.
-2. Crea una rama nueva.
-3. Realiza tus cambios.
-4. Haz un pull request a la rama principal del repositorio original.
+### Automatización y Eficiencia
+La plataforma automatiza la gestión de citas y recordatorios, manteniendo un registro digital preciso de todas las reservas y liberando a los empleados de la carga de trabajo adicional, permitiéndoles enfocarse en brindar un mejor servicio a los clientes.
 
-## Contacto
-Si tienes preguntas o sugerencias, no dudes en ponerte en contacto con nosotros a través de **correo electrónico:** wubbabactan@gmail.com o nuestra **página web:** www.wuba.com
+### Desarrollo Basado en Experiencia Real
+El desarrollo de esta plataforma se basó en la experiencia directa con una clínica estética familiar, asegurando que las necesidades y problemas reales fueran abordados. La información sobre los procedimientos está avalada por profesionales del sector.
+
+### Beneficios Tangibles
+Las clínicas que han implementado nuestra plataforma han observado beneficios tangibles, como la liberación de cargas de trabajo y la mejora en la eficiencia de la gestión de citas, permitiendo al personal enfocarse en áreas críticas de atención al cliente y administración.
+
+## 2. Contexto
+
+### 2.1 Identificación
+
+La plataforma es una web intuitiva y accesible diseñada para proporcionar soluciones efectivas a los desafíos de gestión que enfrentan las clínicas estéticas. Ofrece:
+
+- **Exploración de Procedimientos:** Imágenes y descripciones detalladas.
+- **Comentarios de Usuarios:** Compartir opiniones y recibir retroalimentación.
+- **Agendamiento de Citas:** Gestión eficiente y segura de horarios.
+
+### 2.2 Justificación
+
+La razón de esta medida surge de la necesidad de optimizar la gestión de citas y la comunicación en las clínicas estéticas. El uso de medios no seguros como WhatsApp puede conducir a errores y falta de profesionalismo. La plataforma web aborda estos problemas proporcionando una solución digital robusta que promueve transparencia, eficiencia y seguridad.
+
+### 2.3 Objetivos del Proyecto
+
+#### 2.3.1 Objetivos Principales
+
+Crear un ambiente digital propicio para la gestión de citas y la interacción entre clientes y clínicas estéticas, proporcionando una plataforma accesible, intuitiva y funcional. La integración con Google Calendar asegura una gestión eficiente de las citas en tiempo real y envía recordatorios automáticos para minimizar olvidos.
+
+#### 2.3.2 Objetivos Específicos
+
+- **Gestión de Comentarios:** Permitir a los clientes compartir experiencias y opiniones.
+- **Agendamiento en Tiempo Real:** Integración con Google Calendar para manejo preciso de reservas.
+- **Recordatorios Automáticos:** Envío de notificaciones para reducir citas olvidadas o canceladas.
+- **Moderación de Comentarios:** Garantizar un ambiente de retroalimentación constructivo y respetuoso.
+
+#### 2.3.3 Objetivos de Ampliación
+
+Agregar funciones adicionales como:
+
+- **Promociones y Descuentos:** Atraer y retener clientes con incentivos.
+- **Fidelización de Clientes:** Programas de puntos y recompensas por referencias.
+- **Análisis y Reportes:** Evaluar rendimiento, eficiencia operativa y satisfacción del cliente para mejorar continuamente los servicios y adaptar estrategias comerciales.
+
+---
+
+Desarrollado por Breyner Pavas - EliesfloStetic
