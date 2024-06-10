@@ -41,7 +41,7 @@
                     <!-- /lc_nav_menu -->
                 </div>
                 <div class="lc-block ms-2 my-2">
-                    <a class="navbar-text" href="https://wa.me/011234567890?text=I'm%20interested%20in%20your%20offer">
+                    <a class="navbar-text" href="api.whatsapp.com/send?phone=34653419152">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="2em" height="2em"
                             lc-helper="svg-icon" fill="currentColor" class="me-2">
                             <path

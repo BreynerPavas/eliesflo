@@ -357,6 +357,18 @@ class Memeteca extends Modelo
         $result->execute();
         return ($result->fetch(PDO::FETCH_ASSOC));
     }
+    public function editarProcedimiento($id,$nombre,$precio,$descripcion,$objetivo){
+
+        $consulta = 'UPDATE procedimiento SET name = :nombre , price = :precio, description = :descripcion, goal = :objetivo WHERE id = :id';
+        $result = $this->conexion->prepare($consulta);
+        $result->bindValue(':nombre', $nombre);
+        $result->bindValue(':precio', $precio);
+        $result->bindValue(':descripcion', $descripcion);
+        $result->bindValue(':objetivo', $objetivo);
+        $result->bindValue(':id', $id);
+        $result->execute();
+        return ($result);
+    }
 
 
     public function obtenerTagsSeguidosJSON($idUsuario)
@@ -460,7 +472,7 @@ class Memeteca extends Modelo
         foreach ($result->fetchAll(PDO::FETCH_ASSOC) as $procedimiento) {
             echo('
             <div class="lc-block col-4 col-md-3 col-xxl-2">
-                <img class="img-fluid" src="'.$procedimiento["picture1"].'" width="300" height="300" alt="'.$procedimiento["name"].'" loading="lazy" lc-helper="image">
+                <img class="img-fluid" src="'.$procedimiento["picture1"].'" alt="'.$procedimiento["name"].'" loading="lazy" lc-helper="image">
             </div>
             ');
         }

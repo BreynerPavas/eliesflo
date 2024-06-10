@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+	<style>
+	</style>
   <title>EliEsFLo</title>
 </head>
 <body>
@@ -378,7 +379,7 @@ if(isset($errores)){
 					</div>
 				</div><!-- /lc-block -->
 				<div class="lc-block mb-5">
-					<a class="btn btn-lg btn-light" href="https://maps.app.goo.gl/RiVZEAWQooLdQo1fA" role="button">VIEW MAP</a>
+					<a class="btn btn-lg btn-light" href="https://maps.app.goo.gl/Gknhnr6CGc4ad25cA" role="button">VIEW MAP</a>
 				</div><!-- /lc-block -->
 				<div class="lc-block border-top col-md-6 offset-md-3">
 					<div editable="rich">

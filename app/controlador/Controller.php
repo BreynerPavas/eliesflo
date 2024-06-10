@@ -137,6 +137,13 @@ class Controller
             require __DIR__ . '/../../web/templates/EliHome.php';
         }
     }
+    
+    public function editProcedimiento(){
+        $m = new Memeteca();
+        $procedimiento = $m->obtenerProcedimiento($_GET["id"]);
+        
+        require __DIR__."/../../web/templates/EliEditProcedimiento.php";
+    }
     public function wuLogin()
     {
         try {
@@ -207,6 +214,21 @@ class Controller
         $m = new Memeteca;
         if($m->anyadirComentario($comentario,$_SESSION["idUsuario"],$idPrecedimiento)){
             header('Location: index.php?ctl=EliProcedimientoEspecifico&id='.$idPrecedimiento);
+        }
+    }
+    public function editarProcedimiento(){
+        print_r($_REQUEST);
+        $m = new Memeteca();
+        $id=recoge("id");
+        $nombre=recoge("nombreProcedimiento");
+        $precio=recoge("precio");
+        $descripcion=recoge("descripcion");
+        $objetivo=recoge("objetivo");
+
+        if($m->editarProcedimiento($id,$nombre,$precio,$descripcion,$objetivo)){
+            header("location:index.php?ctl=EliProcedimientoEspecifico&id=".$id);
+        }else{
+            header("location:index.php?ctl=editProcedimiento&id=".$id);
         }
     }
     public function EliProcedimientoEspecifico(){

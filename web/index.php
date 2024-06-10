@@ -39,6 +39,8 @@ $map = array(
     'enviarReserva' => array('controller' => 'Controller', 'action' => 'enviarReserva', 'nivel_usuario' => 1),
     'subirReservacion' => array('controller' => 'Controller', 'action' => 'subirReservacion', 'nivel_usuario' => 1),
     'wuTermCond' => array('controller' => 'Controller', 'action' => 'wuTermCond', 'nivel_usuario' => 0),
+    'editProcedimiento' => array('controller' => 'Controller', 'action' => 'editProcedimiento', 'nivel_usuario' => 2),
+    'editarProcedimiento' => array('controller' => 'Controller', 'action' => 'editarProcedimiento', 'nivel_usuario' => 2),
 
 );
 
